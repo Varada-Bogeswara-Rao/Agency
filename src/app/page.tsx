@@ -1,5 +1,4 @@
-import { StackedSection } from "@/components/StackedSection";
-import { TestimonialsOverlay } from "@/components/TestimonialsOverlay";
+﻿import { TestimonialsOverlay } from "@/components/TestimonialsOverlay";
 
 const services = [
   {
@@ -84,16 +83,16 @@ const testimonials = [
 export default function Home() {
   return (
     <main className="bg-white text-black">
-      <section className="min-h-[100svh] pb-24 pt-24">
+      <section className="min-h-[85svh] pb-16 pt-16">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <h1 className="max-w-3xl font-serif text-5xl font-semibold leading-tight md:text-[4rem]">
             We Build Clean MVPs
             <br />
             That Launch Fast
           </h1>
-          <p className="mt-12 max-w-2xl text-lg text-gray-700 md:text-xl">
+          <p className="mt-8 max-w-2xl text-lg text-gray-700 md:text-xl">
             From concept to deployment, we create functional, scalable products
-            for tech startups — and maintain them as you grow.
+            for tech startups - and maintain them as you grow.
           </p>
           <div className="mt-8">
             <a
@@ -106,12 +105,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="py-24">
+      <section id="services" className="py-16">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <h2 className="font-serif text-4xl font-medium md:text-5xl">
             Services Overview
           </h2>
-          <div className="mt-16 grid gap-10 md:grid-cols-3">
+          <div className="mt-12 grid gap-10 md:grid-cols-3">
             {services.map((service) => (
               <div key={service.title}>
                 <div className="font-serif text-4xl text-black">
@@ -132,12 +131,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="process" className="py-24">
+      <section id="process" className="py-16">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <h2 className="font-serif text-4xl font-medium md:text-5xl">
             Process & Approach
           </h2>
-          <div className="mt-16 grid gap-12 lg:grid-cols-3 lg:gap-20">
+          <div className="mt-12 grid gap-12 lg:grid-cols-3 lg:gap-20">
             {processSteps.map((step) => (
               <div key={step.title}>
                 <div className="font-serif text-6xl text-gray-200">
@@ -155,12 +154,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="work" className="py-24">
+      <section id="work" className="py-16">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <h2 className="font-serif text-4xl font-medium md:text-5xl">
             Case Studies
           </h2>
-          <div className="mt-16 space-y-20">
+          <div className="mt-12 space-y-16">
             {caseStudies.map((study, index) => (
               <div
                 key={study.title}
