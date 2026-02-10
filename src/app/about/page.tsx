@@ -115,7 +115,7 @@ export default function AboutPage() {
           <Reveal delay={0.2}>
             <div className="mt-8">
               <a
-                className="inline-flex h-12 items-center justify-center rounded-sm bg-white px-8 text-sm font-medium text-black transition duration-300 hover:bg-gray-100"
+                className="btn-border-animate inline-flex h-12 items-center justify-center rounded-sm bg-white px-8 text-sm font-medium text-black transition duration-300 hover:bg-gray-100"
                 href="/contact"
               >
                 Get in touch →

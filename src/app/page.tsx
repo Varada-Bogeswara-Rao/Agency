@@ -1,4 +1,5 @@
-import { Reveal } from "@/components/Reveal";
+import { StackedSection } from "@/components/StackedSection";
+import { TestimonialsOverlay } from "@/components/TestimonialsOverlay";
 
 const services = [
   {
@@ -59,227 +60,147 @@ const caseStudies = [
   },
 ];
 
-const benefits = [
+const testimonials = [
   {
-    title: "Clean Code Standards",
-    description:
-      "Every line follows best practices for maintainability and scalability.",
+    quote:
+      "The team consistently delivered high-quality work on time. Their attention to detail was outstanding throughout the build.",
+    author: "Vikram Shastry",
+    role: "CEO, Black Lotus",
   },
   {
-    title: "Launch-Ready Delivery",
-    description:
-      "We focus on real outcomes: performance, reliability, and adoption.",
+    quote:
+      "Professional, communicative, and efficient. They delivered a product that has been instrumental in our growth.",
+    author: "Gautami Raiker",
+    role: "Co-Founder, Contractzy",
   },
   {
-    title: "Product Thinking",
-    description:
-      "We build what matters, aligned to user needs and business goals.",
-  },
-  {
-    title: "Ongoing Support",
-    description:
-      "We maintain and improve your product as your startup grows.",
+    quote:
+      "Highly recommend for anyone looking for outstanding design and clean execution. Their expertise was invaluable.",
+    author: "Vaishali Chitnis",
+    role: "Founder, Spicy Tango",
   },
 ];
 
 export default function Home() {
   return (
-    <main>
-        <section className="min-h-[100svh] pb-24 pt-24">
-          <div className="mx-auto flex max-w-6xl flex-col justify-center px-6 lg:px-12">
-            <Reveal>
-              <h1 className="max-w-3xl font-serif text-5xl font-semibold leading-tight text-black md:text-[4rem]">
-                We Build Clean MVPs
-                <br />
-                That Launch Fast
-              </h1>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <p className="mt-12 max-w-2xl text-lg text-gray-700 md:text-xl">
-                From concept to deployment, we create functional, scalable
-                products for tech startups — and maintain them as you grow.
-              </p>
-            </Reveal>
-            <Reveal delay={0.2}>
-              <div className="mt-8">
-                <a
-                  className="inline-flex h-12 items-center justify-center rounded-sm bg-black px-8 text-sm font-medium text-white transition duration-300 hover:bg-gray-900"
-                  href="/contact"
-                >
-                  Start Your Project →
-                </a>
+    <main className="bg-white text-black">
+      <section className="min-h-[100svh] pb-24 pt-24">
+        <div className="mx-auto max-w-6xl px-6 lg:px-12">
+          <h1 className="max-w-3xl font-serif text-5xl font-semibold leading-tight md:text-[4rem]">
+            We Build Clean MVPs
+            <br />
+            That Launch Fast
+          </h1>
+          <p className="mt-12 max-w-2xl text-lg text-gray-700 md:text-xl">
+            From concept to deployment, we create functional, scalable products
+            for tech startups — and maintain them as you grow.
+          </p>
+          <div className="mt-8">
+            <a
+              className="btn-border-animate inline-flex h-12 items-center justify-center rounded-sm border border-black bg-white px-8 text-sm font-medium text-black"
+              href="/contact"
+            >
+              Start Your Project
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" className="py-24">
+        <div className="mx-auto max-w-6xl px-6 lg:px-12">
+          <h2 className="font-serif text-4xl font-medium md:text-5xl">
+            Services Overview
+          </h2>
+          <div className="mt-16 grid gap-10 md:grid-cols-3">
+            {services.map((service) => (
+              <div key={service.title}>
+                <div className="font-serif text-4xl text-black">
+                  {service.number}
+                </div>
+                <h3 className="mt-6 font-sans text-xl font-semibold text-black">
+                  {service.title}
+                </h3>
+                <p className="mt-4 text-base text-gray-700">
+                  {service.description}
+                </p>
+                <span className="mt-6 inline-block text-sm font-medium text-gray-900">
+                  Learn more
+                </span>
               </div>
-            </Reveal>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="services" className="bg-white py-24">
-          <div className="mx-auto max-w-6xl px-6 lg:px-12">
-            <Reveal>
-              <h2 className="font-serif text-4xl font-medium text-black md:text-5xl">
-                Services Overview
-              </h2>
-            </Reveal>
-            <div className="mt-16 grid gap-8 md:grid-cols-3">
-              {services.map((service) => (
-                <Reveal key={service.title}>
-                  <article className="flex h-full flex-col rounded-sm border border-gray-200 p-10 transition duration-300 hover:border-gray-300 hover:bg-gray-50">
-                    <div className="font-serif text-4xl text-black">
-                      {service.number}
-                    </div>
-                    <h3 className="mt-6 font-serif text-2xl text-black">
-                      {service.title}
-                    </h3>
-                    <p className="mt-6 text-base text-gray-700">
-                      {service.description}
-                    </p>
-                    <a
-                      className="mt-auto pt-8 text-sm font-medium text-gray-900"
-                      href="/services"
-                    >
-                      Learn more →
-                    </a>
-                  </article>
-                </Reveal>
-              ))}
-            </div>
+      <section id="process" className="py-24">
+        <div className="mx-auto max-w-6xl px-6 lg:px-12">
+          <h2 className="font-serif text-4xl font-medium md:text-5xl">
+            Process & Approach
+          </h2>
+          <div className="mt-16 grid gap-12 lg:grid-cols-3 lg:gap-20">
+            {processSteps.map((step) => (
+              <div key={step.title}>
+                <div className="font-serif text-6xl text-gray-200">
+                  {step.number}
+                </div>
+                <h3 className="mt-4 font-sans text-xl font-semibold text-black">
+                  {step.title}
+                </h3>
+                <p className="mt-4 text-base text-gray-700">
+                  {step.description}
+                </p>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="process" className="bg-white py-24">
-          <div className="mx-auto max-w-6xl px-6 lg:px-12">
-            <Reveal>
-              <h2 className="font-serif text-4xl font-medium text-black md:text-5xl">
-                Process & Approach
-              </h2>
-            </Reveal>
-            <div className="relative mt-16 grid gap-12 lg:grid-cols-3 lg:gap-20">
-              <div className="absolute left-0 right-0 top-10 hidden h-px bg-gray-300 lg:block" />
-              {processSteps.map((step, index) => (
-                <Reveal key={step.title} delay={index * 0.05}>
-                  <div className="relative bg-white">
-                    <div className="font-serif text-6xl text-gray-200">
-                      {step.number}
-                    </div>
-                    <h3 className="mt-4 font-serif text-2xl text-black">
-                      {step.title}
-                    </h3>
-                    <p className="mt-4 text-base text-gray-700">
-                      {step.description}
-                    </p>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="work" className="bg-white py-24">
-          <div className="mx-auto max-w-6xl px-6 lg:px-12">
-            <Reveal>
-              <h2 className="font-serif text-4xl font-medium text-black md:text-5xl">
-                Case Studies
-              </h2>
-            </Reveal>
-            <div className="mt-16 space-y-20">
-              {caseStudies.map((study, index) => (
-                <Reveal key={study.title}>
+      <section id="work" className="py-24">
+        <div className="mx-auto max-w-6xl px-6 lg:px-12">
+          <h2 className="font-serif text-4xl font-medium md:text-5xl">
+            Case Studies
+          </h2>
+          <div className="mt-16 space-y-20">
+            {caseStudies.map((study, index) => (
+              <div
+                key={study.title}
+                className={`grid items-center gap-12 lg:grid-cols-2 ${
+                  index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
+                }`}
+              >
+                <div className={`${index % 2 === 1 ? "lg:col-start-2" : ""}`}>
                   <div
-                    className={`grid items-center gap-12 lg:grid-cols-2 ${
-                      index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
-                    }`}
-                  >
-                    <div
-                      className={`${
-                        index % 2 === 1 ? "lg:col-start-2" : ""
-                      }`}
-                    >
-                      <div
-                        role="img"
-                        aria-label={`${study.title} product preview`}
-                        className="aspect-[4/3] w-full rounded-sm border border-gray-200 bg-gray-100"
-                      />
-                    </div>
-                    <div className="lg:px-8">
-                      <p className="text-xs font-medium uppercase tracking-[0.05em] text-gray-600">
-                        {study.label}
-                      </p>
-                      <h3 className="mt-4 font-serif text-3xl text-black md:text-[2.5rem]">
-                        {study.title}
-                      </h3>
-                      <p className="mt-4 text-lg text-gray-700">
-                        {study.description}
-                      </p>
-                      <ul className="mt-6 space-y-3 text-base font-medium text-black">
-                        {study.metrics.map((metric) => (
-                          <li key={metric}>{metric}</li>
-                        ))}
-                      </ul>
-                      <span className="mt-6 inline-block text-sm font-medium text-gray-900">
-                        View case study →
-                      </span>
-                    </div>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-white py-24">
-          <div className="mx-auto max-w-6xl px-6 lg:px-12">
-            <Reveal>
-              <h2 className="font-serif text-4xl font-medium text-black md:text-5xl">
-                Why Choose Us
-              </h2>
-            </Reveal>
-            <div className="mt-16 grid gap-10 md:grid-cols-2">
-              {benefits.map((benefit) => (
-                <Reveal key={benefit.title}>
-                  <article className="rounded-sm border border-gray-200 p-12">
-                    <div className="text-sm font-medium text-gray-600">
-                      Benefit
-                    </div>
-                    <h3 className="mt-4 font-serif text-2xl text-black">
-                      {benefit.title}
-                    </h3>
-                    <p className="mt-4 text-base text-gray-700">
-                      {benefit.description}
-                    </p>
-                  </article>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section
-          id="contact"
-          className="bg-black py-24 text-white md:py-28"
-        >
-          <div className="mx-auto max-w-6xl px-6 text-center lg:px-12">
-            <Reveal>
-              <h2 className="font-serif text-4xl font-medium md:text-5xl">
-                Ready to Build Your MVP?
-              </h2>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-400">
-                Let’s turn your idea into a launched product.
-              </p>
-            </Reveal>
-            <Reveal delay={0.2}>
-              <div className="mt-8">
-                <a
-                  className="inline-flex h-12 items-center justify-center rounded-sm bg-white px-8 text-sm font-medium text-black transition duration-300 hover:bg-gray-100"
-                  href="/contact"
-                >
-                  Get in touch →
-                </a>
+                    role="img"
+                    aria-label={`${study.title} product preview`}
+                    className="aspect-[4/3] w-full border border-gray-200 bg-gray-100"
+                  />
+                </div>
+                <div className="lg:px-8">
+                  <p className="text-xs font-medium uppercase tracking-[0.05em] text-gray-600">
+                    {study.label}
+                  </p>
+                  <h3 className="mt-4 font-sans text-2xl font-semibold text-black md:text-[2.5rem]">
+                    {study.title}
+                  </h3>
+                  <p className="mt-4 text-lg text-gray-700">
+                    {study.description}
+                  </p>
+                  <ul className="mt-6 space-y-3 text-base font-medium text-black">
+                    {study.metrics.map((metric) => (
+                      <li key={metric}>{metric}</li>
+                    ))}
+                  </ul>
+                  <span className="mt-6 inline-block text-sm font-medium text-gray-900">
+                    View case study
+                  </span>
+                </div>
               </div>
-            </Reveal>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
+
+      <TestimonialsOverlay testimonials={testimonials} />
     </main>
   );
 }

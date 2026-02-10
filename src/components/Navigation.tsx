@@ -29,19 +29,26 @@ export function Navigation() {
             return (
               <Link
                 key={link.href}
-                className={`transition ${
-                  active ? "text-black underline" : "hover:text-black"
+                className={`group relative inline-flex items-center transition ${
+                  active ? "text-black" : "hover:text-black"
                 }`}
                 href={link.href}
               >
-                {link.label}
+                <span className="relative">
+                  {link.label}
+                  <span
+                    className={`pointer-events-none absolute left-1/2 top-full mt-1 h-px w-[110%] -translate-x-1/2 scale-x-0 bg-black transition duration-500 ease-out group-hover:scale-x-100 ${
+                      active ? "scale-x-100" : ""
+                    }`}
+                  />
+                </span>
               </Link>
             );
           })}
         </nav>
 
         <Link
-          className="hidden h-10 items-center justify-center rounded-sm border border-black px-5 text-sm font-medium text-black transition duration-300 hover:bg-black hover:text-white md:flex"
+          className="btn-border-animate hidden h-10 items-center justify-center rounded-sm border border-black px-5 text-sm font-medium text-black md:flex"
           href="/contact"
         >
           Start Project
@@ -81,7 +88,7 @@ export function Navigation() {
                 </Link>
               ))}
               <Link
-                className="mt-8 inline-flex h-12 items-center justify-center rounded-sm bg-black px-6 text-sm font-medium text-white"
+                className="btn-border-animate mt-8 inline-flex h-12 items-center justify-center rounded-sm bg-black px-6 text-sm font-medium text-white"
                 href="/contact"
                 onClick={() => setOpen(false)}
               >

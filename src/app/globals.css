@@ -60,3 +60,40 @@ button {
   outline: 2px solid var(--gray-900);
   outline-offset: 2px;
 }
+
+.btn-border-animate {
+  position: relative;
+}
+
+.btn-border-animate::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    currentColor 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  -webkit-mask: linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn-border-animate:hover::before {
+  opacity: 1;
+  animation: border-sweep 0.9s linear infinite;
+}
+
+@keyframes border-sweep {
+  to {
+    background-position: -100% 0;
+  }
+}

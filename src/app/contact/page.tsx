@@ -142,7 +142,7 @@ export default function ContactPage() {
                   className="mt-2 w-full rounded-sm border border-gray-300 px-4 py-3 text-base focus:border-gray-900"
                 />
               </div>
-              <button className="h-12 w-full rounded-sm bg-black text-sm font-medium text-white transition duration-300 hover:bg-gray-900">
+              <button className="btn-border-animate h-12 w-full rounded-sm bg-black text-sm font-medium text-white transition duration-300 hover:bg-gray-900">
                 Start Your Project →
               </button>
             </form>
