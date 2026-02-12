@@ -28,7 +28,7 @@ export function TestimonialsOverlay({ testimonials }: TestimonialsOverlayProps) 
         <div className="mx-auto flex min-h-[100svh] max-w-6xl items-center px-6 py-16 lg:px-12">
           <motion.div
             style={{ scale: shrink, y: slideDown }}
-            className="w-full origin-top rounded-[36px] border border-gray-200 bg-white p-10 shadow-[0_24px_60px_rgba(0,0,0,0.12)] md:p-14"
+            className="w-full origin-top rounded-[36px] border border-gray-800 bg-gray-900 p-10 shadow-[0_24px_60px_rgba(0,0,0,0.55)] md:p-14"
           >
             <h2 className="font-serif text-4xl font-medium md:text-5xl">
               What Our Clients Say
@@ -37,16 +37,16 @@ export function TestimonialsOverlay({ testimonials }: TestimonialsOverlayProps) 
               {testimonials.map((testimonial) => (
                 <article
                   key={testimonial.author}
-                  className="flex h-full flex-col rounded-[24px] border border-gray-200 bg-white p-7 shadow-[0_14px_32px_rgba(0,0,0,0.08)]"
+                  className="flex h-full flex-col rounded-[24px] border border-gray-800 bg-gray-950 p-7 shadow-[0_14px_32px_rgba(0,0,0,0.6)]"
                 >
-                  <p className="text-lg italic leading-relaxed text-gray-700">
+                  <p className="text-lg italic leading-relaxed text-gray-300">
                     {testimonial.quote}
                   </p>
                   <div className="mt-6">
-                    <div className="font-medium text-black">
+                    <div className="font-medium text-white">
                       {testimonial.author}
                     </div>
-                    <div className="text-sm text-gray-600">
+                    <div className="text-sm text-gray-400">
                       {testimonial.role}
                     </div>
                   </div>
@@ -59,16 +59,16 @@ export function TestimonialsOverlay({ testimonials }: TestimonialsOverlayProps) 
 
       <section id="contact" className="relative z-20 mt-[10svh]">
         <div className="mx-auto flex min-h-[100svh] w-full max-w-6xl items-center px-6 py-16 lg:px-12">
-          <div className="flex min-h-[70svh] w-full flex-col justify-center rounded-[36px] border border-gray-200 bg-white p-10 text-center shadow-[0_24px_60px_rgba(0,0,0,0.16)] md:min-h-[75svh] md:p-14">
+          <div className="flex min-h-[70svh] w-full flex-col justify-center rounded-[36px] border border-gray-800 bg-gray-900 p-10 text-center shadow-[0_24px_60px_rgba(0,0,0,0.6)] md:min-h-[75svh] md:p-14">
             <h2 className="font-serif text-4xl font-medium md:text-5xl">
               Ready to Build Your MVP?
             </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-400">
               Let&apos;s turn your idea into a launched product.
             </p>
             <div className="mt-8">
               <a
-                className="btn-border-animate inline-flex h-12 items-center justify-center rounded-sm border border-black bg-white px-8 text-sm font-medium text-black"
+                className="btn-border-animate inline-flex h-12 items-center justify-center rounded-sm border border-gray-200 bg-gray-100 px-8 text-sm font-medium text-black"
                 href="/contact"
               >
                 Get in touch

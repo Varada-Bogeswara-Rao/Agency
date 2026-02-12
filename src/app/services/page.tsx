@@ -48,21 +48,21 @@ const stack = [
 
 export default function ServicesPage() {
   return (
-    <main className="bg-white">
+    <main className="bg-gray-950 text-gray-100">
       <section className="flex min-h-[70svh] items-center py-24">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <Reveal>
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-gray-600">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-gray-400">
               What We Do
             </p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h1 className="mt-4 font-serif text-5xl font-semibold text-black md:text-[3.5rem]">
+            <h1 className="mt-4 font-serif text-5xl font-semibold text-white md:text-[3.5rem]">
               Build. Launch. Maintain.
             </h1>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mt-6 max-w-2xl text-lg text-gray-700 md:text-xl">
+            <p className="mt-6 max-w-2xl text-lg text-gray-300 md:text-xl">
               End-to-end development services for tech startups who need to move
               fast without compromising quality.
             </p>
@@ -81,23 +81,23 @@ export default function ServicesPage() {
             >
               <Reveal>
                 <div className={`${index % 2 === 1 ? "lg:col-start-2" : ""}`}>
-                  <h2 className="font-serif text-4xl text-black md:text-[2.5rem]">
+                  <h2 className="font-serif text-4xl text-white md:text-[2.5rem]">
                     {service.title}
                   </h2>
-                  <p className="mt-6 text-lg text-gray-700">
+                  <p className="mt-6 text-lg text-gray-300">
                     {service.description}
                   </p>
                   <div className="mt-6">
-                    <div className="text-sm font-medium text-black">
+                    <div className="text-sm font-medium text-white">
                       What’s included
                     </div>
-                    <ul className="mt-4 space-y-2 text-base text-gray-700">
+                    <ul className="mt-4 space-y-2 text-base text-gray-300">
                       {service.includes.map((item) => (
                         <li key={item}>{item}</li>
                       ))}
                     </ul>
                   </div>
-                  <p className="mt-6 text-base text-gray-700">
+                  <p className="mt-6 text-base text-gray-300">
                     {service.timeline}
                   </p>
                 </div>
@@ -108,7 +108,7 @@ export default function ServicesPage() {
                     index % 2 === 1 ? "lg:col-start-1" : ""
                   }`}
                 >
-                  <div className="aspect-[4/3] w-full rounded-sm border border-gray-200 bg-gray-100" />
+                  <div className="aspect-[4/3] w-full rounded-sm border border-gray-800 bg-gray-900" />
                 </div>
               </Reveal>
             </div>
@@ -116,17 +116,17 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-white py-24">
+      <section className="bg-gray-950 py-24">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <Reveal>
-            <h2 className="font-serif text-4xl text-black md:text-5xl">
+            <h2 className="font-serif text-4xl text-white md:text-5xl">
               Technology Stack
             </h2>
           </Reveal>
           <div className="mt-14 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
             {stack.map((item) => (
               <Reveal key={item}>
-                <div className="flex h-20 items-center justify-center rounded-sm border border-gray-200 text-sm font-medium text-gray-700 transition duration-300 hover:scale-[1.02] hover:opacity-80">
+                <div className="flex h-20 items-center justify-center rounded-sm border border-gray-800 bg-gray-900 text-sm font-medium text-gray-300 transition duration-300 hover:scale-[1.02] hover:opacity-80">
                   {item}
                 </div>
               </Reveal>

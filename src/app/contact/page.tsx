@@ -21,16 +21,16 @@ const faqs = [
 
 export default function ContactPage() {
   return (
-    <main className="bg-white">
+    <main className="bg-gray-950 text-gray-100">
       <section className="py-24">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <Reveal>
-            <h1 className="font-serif text-5xl font-semibold text-black md:text-[3.5rem]">
+            <h1 className="font-serif text-5xl font-semibold text-white md:text-[3.5rem]">
               Let’s Talk
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-6 max-w-2xl text-lg text-gray-700 md:text-xl">
+            <p className="mt-6 max-w-2xl text-lg text-gray-300 md:text-xl">
               Tell us about your project and we’ll get back to you within 24
               hours.
             </p>
@@ -41,10 +41,10 @@ export default function ContactPage() {
       <section className="py-24">
         <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[3fr_2fr] lg:px-12">
           <Reveal>
-            <form className="space-y-6 rounded-sm border border-gray-200 p-10">
+            <form className="space-y-6 rounded-sm border border-gray-800 bg-gray-900 p-10">
               <div>
                 <label
-                  className="text-sm font-medium text-gray-900"
+                  className="text-sm font-medium text-gray-200"
                   htmlFor="name"
                 >
                   Your Name
@@ -53,12 +53,12 @@ export default function ContactPage() {
                   id="name"
                   name="name"
                   type="text"
-                  className="mt-2 w-full rounded-sm border border-gray-300 px-4 py-3 text-base focus:border-gray-900"
+                  className="mt-2 w-full rounded-sm border border-gray-700 bg-gray-950 px-4 py-3 text-base text-gray-100 focus:border-gray-200 focus:outline-none"
                 />
               </div>
               <div>
                 <label
-                  className="text-sm font-medium text-gray-900"
+                  className="text-sm font-medium text-gray-200"
                   htmlFor="email"
                 >
                   Email
@@ -67,12 +67,12 @@ export default function ContactPage() {
                   id="email"
                   name="email"
                   type="email"
-                  className="mt-2 w-full rounded-sm border border-gray-300 px-4 py-3 text-base focus:border-gray-900"
+                  className="mt-2 w-full rounded-sm border border-gray-700 bg-gray-950 px-4 py-3 text-base text-gray-100 focus:border-gray-200 focus:outline-none"
                 />
               </div>
               <div>
                 <label
-                  className="text-sm font-medium text-gray-900"
+                  className="text-sm font-medium text-gray-200"
                   htmlFor="company"
                 >
                   Company (optional)
@@ -81,12 +81,12 @@ export default function ContactPage() {
                   id="company"
                   name="company"
                   type="text"
-                  className="mt-2 w-full rounded-sm border border-gray-300 px-4 py-3 text-base focus:border-gray-900"
+                  className="mt-2 w-full rounded-sm border border-gray-700 bg-gray-950 px-4 py-3 text-base text-gray-100 focus:border-gray-200 focus:outline-none"
                 />
               </div>
               <div>
                 <label
-                  className="text-sm font-medium text-gray-900"
+                  className="text-sm font-medium text-gray-200"
                   htmlFor="project"
                 >
                   Project Type
@@ -94,7 +94,7 @@ export default function ContactPage() {
                 <select
                   id="project"
                   name="project"
-                  className="mt-2 w-full rounded-sm border border-gray-300 px-4 py-3 text-base focus:border-gray-900"
+                  className="mt-2 w-full rounded-sm border border-gray-700 bg-gray-950 px-4 py-3 text-base text-gray-100 focus:border-gray-200 focus:outline-none"
                   defaultValue=""
                 >
                   <option value="" disabled>
@@ -108,7 +108,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <label
-                  className="text-sm font-medium text-gray-900"
+                  className="text-sm font-medium text-gray-200"
                   htmlFor="budget"
                 >
                   Budget Range
@@ -116,7 +116,7 @@ export default function ContactPage() {
                 <select
                   id="budget"
                   name="budget"
-                  className="mt-2 w-full rounded-sm border border-gray-300 px-4 py-3 text-base focus:border-gray-900"
+                  className="mt-2 w-full rounded-sm border border-gray-700 bg-gray-950 px-4 py-3 text-base text-gray-100 focus:border-gray-200 focus:outline-none"
                   defaultValue=""
                 >
                   <option value="" disabled>
@@ -130,7 +130,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <label
-                  className="text-sm font-medium text-gray-900"
+                  className="text-sm font-medium text-gray-200"
                   htmlFor="message"
                 >
                   Message
@@ -139,33 +139,33 @@ export default function ContactPage() {
                   id="message"
                   name="message"
                   rows={5}
-                  className="mt-2 w-full rounded-sm border border-gray-300 px-4 py-3 text-base focus:border-gray-900"
+                  className="mt-2 w-full rounded-sm border border-gray-700 bg-gray-950 px-4 py-3 text-base text-gray-100 focus:border-gray-200 focus:outline-none"
                 />
               </div>
-              <button className="btn-border-animate h-12 w-full rounded-sm bg-black text-sm font-medium text-white transition duration-300 hover:bg-gray-900">
+              <button className="btn-border-animate h-12 w-full rounded-sm bg-white text-sm font-medium text-black transition duration-300 hover:bg-gray-100">
                 Start Your Project →
               </button>
             </form>
           </Reveal>
           <Reveal>
-            <div className="space-y-6 rounded-sm border border-gray-200 p-10">
+            <div className="space-y-6 rounded-sm border border-gray-800 bg-gray-900 p-10">
               <div>
-                <div className="text-sm font-medium text-gray-900">Email</div>
-                <div className="mt-2 text-base text-black">
+                <div className="text-sm font-medium text-gray-200">Email</div>
+                <div className="mt-2 text-base text-white">
                   hello@agency.com
                 </div>
               </div>
               <div>
-                <div className="text-sm font-medium text-gray-900">Location</div>
-                <div className="mt-2 text-base text-gray-700">
+                <div className="text-sm font-medium text-gray-200">Location</div>
+                <div className="mt-2 text-base text-gray-300">
                   San Francisco, CA
                 </div>
               </div>
               <div>
-                <div className="text-sm font-medium text-gray-900">
+                <div className="text-sm font-medium text-gray-200">
                   Response Time
                 </div>
-                <div className="mt-2 text-base text-gray-700">
+                <div className="mt-2 text-base text-gray-300">
                   We typically respond within 24 hours.
                 </div>
               </div>
@@ -177,7 +177,7 @@ export default function ContactPage() {
       <section className="py-24">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <Reveal>
-            <h2 className="font-serif text-4xl text-black md:text-5xl">
+            <h2 className="font-serif text-4xl text-white md:text-5xl">
               FAQ
             </h2>
           </Reveal>

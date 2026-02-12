@@ -55,9 +55,9 @@ export function StackedSection({
         sticky ? "sticky top-0" : "relative",
         "min-h-[100svh] w-full overflow-hidden",
         rounded
-          ? "rounded-t-[56px] shadow-[0_-18px_45px_rgba(0,0,0,0.18)]"
+          ? "rounded-t-[56px] shadow-[0_-18px_45px_rgba(0,0,0,0.6)]"
           : "",
-        "border border-gray-200",
+        "border border-gray-800",
         className ?? "",
       ].join(" ")}
     >

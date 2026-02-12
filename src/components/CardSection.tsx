@@ -22,7 +22,7 @@ export function CardSection({ id, children, className }: CardSectionProps) {
           className ?? "",
         ].join(" ")}
       >
-        <div className="rounded-[36px] border border-gray-200 bg-white p-10 shadow-[0_24px_60px_rgba(0,0,0,0.12)] md:p-14">
+        <div className="rounded-[36px] border border-gray-800 bg-gray-900 p-10 shadow-[0_24px_60px_rgba(0,0,0,0.45)] md:p-14">
           {children}
         </div>
       </motion.div>

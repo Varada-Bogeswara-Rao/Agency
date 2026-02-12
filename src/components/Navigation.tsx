@@ -17,27 +17,27 @@ export function Navigation() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white">
+    <header className="sticky top-0 z-50 border-b border-gray-800 bg-gray-950/95 backdrop-blur">
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6 lg:px-12">
-        <Link className="font-serif text-2xl font-semibold text-black" href="/">
+        <Link className="font-serif text-2xl font-semibold text-white" href="/">
           Agency
         </Link>
 
-        <nav className="hidden items-center gap-8 text-sm font-medium text-gray-900 md:flex">
+        <nav className="hidden items-center gap-8 text-sm font-medium text-gray-200 md:flex">
           {links.map((link) => {
             const active = pathname === link.href;
             return (
               <Link
                 key={link.href}
                 className={`group relative inline-flex items-center transition ${
-                  active ? "text-black" : "hover:text-black"
+                  active ? "text-white" : "hover:text-white"
                 }`}
                 href={link.href}
               >
                 <span className="relative">
                   {link.label}
                   <span
-                    className={`pointer-events-none absolute left-1/2 top-full mt-1 h-px w-[110%] -translate-x-1/2 scale-x-0 bg-black transition duration-500 ease-out group-hover:scale-x-100 ${
+                    className={`pointer-events-none absolute left-1/2 top-full mt-1 h-px w-[110%] -translate-x-1/2 scale-x-0 bg-white transition duration-500 ease-out group-hover:scale-x-100 ${
                       active ? "scale-x-100" : ""
                     }`}
                   />
@@ -48,21 +48,21 @@ export function Navigation() {
         </nav>
 
         <Link
-          className="btn-border-animate hidden h-10 items-center justify-center rounded-sm border border-black px-5 text-sm font-medium text-black md:flex"
+          className="btn-border-animate hidden h-10 items-center justify-center rounded-sm border border-gray-200 px-5 text-sm font-medium text-gray-100 md:flex"
           href="/contact"
         >
           Start Project
         </Link>
 
         <button
-          className="flex h-10 w-10 items-center justify-center rounded-sm border border-gray-300 text-gray-900 md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-sm border border-gray-700 text-gray-200 md:hidden"
           aria-label="Toggle navigation menu"
           onClick={() => setOpen((prev) => !prev)}
         >
           <span className="block h-4 w-5">
-            <span className="block h-px w-full bg-black"></span>
-            <span className="mt-1.5 block h-px w-full bg-black"></span>
-            <span className="mt-1.5 block h-px w-full bg-black"></span>
+            <span className="block h-px w-full bg-white"></span>
+            <span className="mt-1.5 block h-px w-full bg-white"></span>
+            <span className="mt-1.5 block h-px w-full bg-white"></span>
           </span>
         </button>
       </div>
@@ -70,7 +70,7 @@ export function Navigation() {
       <AnimatePresence>
         {open ? (
           <motion.div
-            className="fixed inset-0 z-40 bg-white md:hidden"
+            className="fixed inset-0 z-40 bg-gray-950 md:hidden"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
@@ -80,7 +80,7 @@ export function Navigation() {
               {links.map((link) => (
                 <Link
                   key={link.href}
-                  className="border-b border-gray-200 py-4 text-2xl font-medium text-black"
+                  className="border-b border-gray-800 py-4 text-2xl font-medium text-white"
                   href={link.href}
                   onClick={() => setOpen(false)}
                 >
@@ -88,7 +88,7 @@ export function Navigation() {
                 </Link>
               ))}
               <Link
-                className="btn-border-animate mt-8 inline-flex h-12 items-center justify-center rounded-sm bg-black px-6 text-sm font-medium text-white"
+                className="btn-border-animate mt-8 inline-flex h-12 items-center justify-center rounded-sm bg-white px-6 text-sm font-medium text-black"
                 href="/contact"
                 onClick={() => setOpen(false)}
               >

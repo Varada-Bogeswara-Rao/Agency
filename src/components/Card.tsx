@@ -7,7 +7,7 @@ type CardProps = HTMLAttributes<HTMLElement> & {
 };
 
 export function Card({ as: Component = "div", className, ...props }: CardProps) {
-  const classes = ["rounded-[28px] border border-gray-200 bg-white", className]
+  const classes = ["rounded-[28px] border border-gray-800 bg-gray-900", className]
     .filter(Boolean)
     .join(" ");
 

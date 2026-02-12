@@ -23,18 +23,18 @@ const values = [
 
 export default function AboutPage() {
   return (
-    <main className="bg-white">
+    <main className="bg-gray-950 text-gray-100">
       <section className="py-24">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <Reveal>
-            <h1 className="font-serif text-5xl font-semibold text-black md:text-[3.5rem]">
+            <h1 className="font-serif text-5xl font-semibold text-white md:text-[3.5rem]">
               We Build Products
               <br />
               That Matter
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-6 max-w-3xl text-lg text-gray-700 md:text-xl">
+            <p className="mt-6 max-w-3xl text-lg text-gray-300 md:text-xl">
               Founded by developers who were tired of bloated codebases and
               missed deadlines. We do things differently.
             </p>
@@ -45,25 +45,25 @@ export default function AboutPage() {
       <section className="py-24">
         <div className="mx-auto max-w-3xl px-6 lg:px-12">
           <Reveal>
-            <p className="text-lg text-gray-700">
+            <p className="text-lg text-gray-300">
               We started Agency after years inside startups where velocity
               suffered under messy code and unclear priorities. We believe MVPs
               should be clean, reliable, and ready to scale from day one.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-8 text-lg text-gray-700">
+            <p className="mt-8 text-lg text-gray-300">
               Our process is built around clarity. We ask the right questions,
               align early on outcomes, and ship in focused iterations.
             </p>
           </Reveal>
           <Reveal delay={0.2}>
-            <blockquote className="mt-16 border-l-2 border-gray-300 pl-10 font-serif text-3xl text-black">
+            <blockquote className="mt-16 border-l-2 border-gray-700 pl-10 font-serif text-3xl text-white">
               “Clean code isn’t optional. It’s how we work.”
             </blockquote>
           </Reveal>
           <Reveal delay={0.3}>
-            <p className="mt-12 text-lg text-gray-700">
+            <p className="mt-12 text-lg text-gray-300">
               That discipline helps teams move faster without sacrificing
               stability. It’s how we help startups earn user trust early.
             </p>
@@ -74,22 +74,22 @@ export default function AboutPage() {
       <section className="py-24">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <Reveal>
-            <h2 className="font-serif text-4xl text-black md:text-5xl">
+            <h2 className="font-serif text-4xl text-white md:text-5xl">
               Values & Principles
             </h2>
           </Reveal>
           <div className="mt-16 space-y-16">
             {values.map((value) => (
               <Reveal key={value.title}>
-                <div className="relative border-b border-gray-200 pb-12">
-                  <div className="absolute -left-2 -top-6 font-serif text-7xl text-gray-100">
+                <div className="relative border-b border-gray-800 pb-12">
+                  <div className="absolute -left-2 -top-6 font-serif text-7xl text-gray-700">
                     {value.number}
                   </div>
                   <div className="relative">
-                    <h3 className="font-serif text-3xl text-black">
+                    <h3 className="font-serif text-3xl text-white">
                       {value.title}
                     </h3>
-                    <p className="mt-4 text-base text-gray-700">
+                    <p className="mt-4 text-base text-gray-300">
                       {value.description}
                     </p>
                   </div>

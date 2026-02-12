@@ -27,16 +27,16 @@ const outcomes = [
 
 export default function WorkPage() {
   return (
-    <main className="bg-white">
+    <main className="bg-gray-950 text-gray-100">
       <section className="py-24">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <Reveal>
-            <h1 className="font-serif text-5xl font-semibold text-black md:text-[3.5rem]">
+            <h1 className="font-serif text-5xl font-semibold text-white md:text-[3.5rem]">
               Our Work
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-6 max-w-2xl text-lg text-gray-700 md:text-xl">
+            <p className="mt-6 max-w-2xl text-lg text-gray-300 md:text-xl">
               Clean MVPs that launched successfully.
             </p>
           </Reveal>
@@ -48,9 +48,9 @@ export default function WorkPage() {
           <div className="grid gap-8 md:grid-cols-2">
             {projects.map((project) => (
               <Reveal key={project.name}>
-                <div className="group relative overflow-hidden rounded-sm border border-gray-200">
-                  <div className="aspect-[16/10] w-full bg-gray-100" />
-                  <div className="absolute inset-0 flex flex-col justify-end bg-black/90 p-8 opacity-0 transition duration-300 group-hover:opacity-100">
+                <div className="group relative overflow-hidden rounded-sm border border-gray-800">
+                  <div className="aspect-[16/10] w-full bg-gray-900" />
+                  <div className="absolute inset-0 flex flex-col justify-end bg-black/85 p-8 opacity-0 transition duration-300 group-hover:opacity-100">
                     <div className="font-serif text-2xl text-white">
                       {project.name}
                     </div>
@@ -71,26 +71,26 @@ export default function WorkPage() {
       <section className="py-24">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <Reveal>
-            <div className="aspect-[16/7] w-full rounded-sm border border-gray-200 bg-gray-100" />
+            <div className="aspect-[16/7] w-full rounded-sm border border-gray-800 bg-gray-900" />
           </Reveal>
           <div className="mx-auto mt-16 max-w-3xl">
             <Reveal>
-              <h2 className="font-serif text-4xl text-black md:text-5xl">
+              <h2 className="font-serif text-4xl text-white md:text-5xl">
                 Harbor
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
-              <p className="mt-3 text-sm text-gray-600">
+              <p className="mt-3 text-sm text-gray-400">
                 Client • Fintech • 6-week timeline
               </p>
             </Reveal>
             <div className="mt-12 space-y-12">
               <Reveal>
                 <div>
-                  <p className="text-xs font-medium uppercase tracking-[0.2em] text-gray-600">
+                  <p className="text-xs font-medium uppercase tracking-[0.2em] text-gray-400">
                     The Challenge
                   </p>
-                  <p className="mt-4 text-lg text-gray-700">
+                  <p className="mt-4 text-lg text-gray-300">
                     Launch a secure onboarding flow with compliance-ready
                     reporting in under two months.
                   </p>
@@ -98,10 +98,10 @@ export default function WorkPage() {
               </Reveal>
               <Reveal>
                 <div>
-                  <p className="text-xs font-medium uppercase tracking-[0.2em] text-gray-600">
+                  <p className="text-xs font-medium uppercase tracking-[0.2em] text-gray-400">
                     Our Solution
                   </p>
-                  <p className="mt-4 text-lg text-gray-700">
+                  <p className="mt-4 text-lg text-gray-300">
                     We built a modular architecture, reusable design system, and
                     automated QA workflow to ship fast with confidence.
                   </p>
@@ -109,19 +109,19 @@ export default function WorkPage() {
               </Reveal>
               <Reveal>
                 <div>
-                  <p className="text-xs font-medium uppercase tracking-[0.2em] text-gray-600">
+                  <p className="text-xs font-medium uppercase tracking-[0.2em] text-gray-400">
                     Outcomes
                   </p>
                   <div className="mt-8 grid gap-6 md:grid-cols-3">
                     {outcomes.map((outcome) => (
                       <div
                         key={outcome.label}
-                        className="rounded-sm border border-gray-200 p-6"
+                        className="rounded-sm border border-gray-800 bg-gray-900 p-6"
                       >
-                        <div className="font-serif text-3xl text-black">
+                        <div className="font-serif text-3xl text-white">
                           {outcome.value}
                         </div>
-                        <div className="mt-2 text-sm text-gray-700">
+                        <div className="mt-2 text-sm text-gray-300">
                           {outcome.label}
                         </div>
                       </div>
