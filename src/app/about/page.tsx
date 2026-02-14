@@ -23,11 +23,11 @@ const values = [
 
 export default function AboutPage() {
   return (
-    <main className="bg-gray-950 text-gray-100">
+    <main className="bg-white text-gray-100">
       <section className="py-24">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <Reveal>
-            <h1 className="font-serif text-5xl font-semibold text-white md:text-[3.5rem]">
+            <h1 className="font-serif text-5xl font-semibold text-gray-100 md:text-[3.5rem]">
               We Build Products
               <br />
               That Matter
@@ -58,7 +58,7 @@ export default function AboutPage() {
             </p>
           </Reveal>
           <Reveal delay={0.2}>
-            <blockquote className="mt-16 border-l-2 border-gray-700 pl-10 font-serif text-3xl text-white">
+            <blockquote className="mt-16 border-l-2 border-gray-700 pl-10 font-serif text-3xl text-gray-100">
               “Clean code isn’t optional. It’s how we work.”
             </blockquote>
           </Reveal>
@@ -74,7 +74,7 @@ export default function AboutPage() {
       <section className="py-24">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <Reveal>
-            <h2 className="font-serif text-4xl text-white md:text-5xl">
+            <h2 className="font-serif text-4xl text-gray-100 md:text-5xl">
               Values & Principles
             </h2>
           </Reveal>
@@ -86,7 +86,7 @@ export default function AboutPage() {
                     {value.number}
                   </div>
                   <div className="relative">
-                    <h3 className="font-serif text-3xl text-white">
+                    <h3 className="font-serif text-3xl text-gray-100">
                       {value.title}
                     </h3>
                     <p className="mt-4 text-base text-gray-300">
@@ -100,7 +100,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-black py-24 text-white">
+      <section className="bg-white py-24 text-gray-100">
         <div className="mx-auto max-w-6xl px-6 text-center lg:px-12">
           <Reveal>
             <h2 className="font-serif text-4xl md:text-5xl">
@@ -115,7 +115,7 @@ export default function AboutPage() {
           <Reveal delay={0.2}>
             <div className="mt-8">
               <a
-                className="btn-border-animate inline-flex h-12 items-center justify-center rounded-sm bg-white px-8 text-sm font-medium text-black transition duration-300 hover:bg-gray-100"
+                className="btn-border-animate inline-flex h-12 items-center justify-center rounded-sm bg-gray-100 px-8 text-sm font-medium text-black transition duration-300 hover:bg-gray-100"
                 href="/contact"
               >
                 Get in touch →

@@ -17,9 +17,9 @@ export function Navigation() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-800 bg-gray-950/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-gray-800 bg-white/95 backdrop-blur">
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6 lg:px-12">
-        <Link className="font-serif text-2xl font-semibold text-white" href="/">
+        <Link className="font-serif text-2xl font-semibold text-gray-100" href="/">
           Agency
         </Link>
 
@@ -30,14 +30,14 @@ export function Navigation() {
               <Link
                 key={link.href}
                 className={`group relative inline-flex items-center transition ${
-                  active ? "text-white" : "hover:text-white"
+                  active ? "text-gray-100" : "hover:text-gray-100"
                 }`}
                 href={link.href}
               >
                 <span className="relative">
                   {link.label}
                   <span
-                    className={`pointer-events-none absolute left-1/2 top-full mt-1 h-px w-[110%] -translate-x-1/2 scale-x-0 bg-white transition duration-500 ease-out group-hover:scale-x-100 ${
+                    className={`pointer-events-none absolute left-1/2 top-full mt-1 h-px w-[110%] -translate-x-1/2 scale-x-0 bg-gray-100 transition duration-500 ease-out group-hover:scale-x-100 ${
                       active ? "scale-x-100" : ""
                     }`}
                   />
@@ -60,9 +60,9 @@ export function Navigation() {
           onClick={() => setOpen((prev) => !prev)}
         >
           <span className="block h-4 w-5">
-            <span className="block h-px w-full bg-white"></span>
-            <span className="mt-1.5 block h-px w-full bg-white"></span>
-            <span className="mt-1.5 block h-px w-full bg-white"></span>
+            <span className="block h-px w-full bg-gray-100"></span>
+            <span className="mt-1.5 block h-px w-full bg-gray-100"></span>
+            <span className="mt-1.5 block h-px w-full bg-gray-100"></span>
           </span>
         </button>
       </div>
@@ -70,7 +70,7 @@ export function Navigation() {
       <AnimatePresence>
         {open ? (
           <motion.div
-            className="fixed inset-0 z-40 bg-gray-950 md:hidden"
+            className="fixed inset-0 z-40 bg-white md:hidden"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
@@ -80,7 +80,7 @@ export function Navigation() {
               {links.map((link) => (
                 <Link
                   key={link.href}
-                  className="border-b border-gray-800 py-4 text-2xl font-medium text-white"
+                  className="border-b border-gray-800 py-4 text-2xl font-medium text-gray-100"
                   href={link.href}
                   onClick={() => setOpen(false)}
                 >
@@ -88,7 +88,7 @@ export function Navigation() {
                 </Link>
               ))}
               <Link
-                className="btn-border-animate mt-8 inline-flex h-12 items-center justify-center rounded-sm bg-white px-6 text-sm font-medium text-black"
+                className="btn-border-animate mt-8 inline-flex h-12 items-center justify-center rounded-sm bg-gray-100 px-6 text-sm font-medium text-black"
                 href="/contact"
                 onClick={() => setOpen(false)}
               >

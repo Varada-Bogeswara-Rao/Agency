@@ -27,11 +27,11 @@ const outcomes = [
 
 export default function WorkPage() {
   return (
-    <main className="bg-gray-950 text-gray-100">
+    <main className="bg-white text-gray-100">
       <section className="py-24">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <Reveal>
-            <h1 className="font-serif text-5xl font-semibold text-white md:text-[3.5rem]">
+            <h1 className="font-serif text-5xl font-semibold text-gray-100 md:text-[3.5rem]">
               Our Work
             </h1>
           </Reveal>
@@ -50,14 +50,14 @@ export default function WorkPage() {
               <Reveal key={project.name}>
                 <div className="group relative overflow-hidden rounded-sm border border-gray-800">
                   <div className="aspect-[16/10] w-full bg-gray-900" />
-                  <div className="absolute inset-0 flex flex-col justify-end bg-black/85 p-8 opacity-0 transition duration-300 group-hover:opacity-100">
-                    <div className="font-serif text-2xl text-white">
+                  <div className="absolute inset-0 flex flex-col justify-end bg-white/85 p-8 opacity-0 transition duration-300 group-hover:opacity-100">
+                    <div className="font-serif text-2xl text-gray-100">
                       {project.name}
                     </div>
                     <div className="mt-2 text-sm text-gray-400">
                       {project.category}
                     </div>
-                    <div className="mt-4 text-sm font-medium text-white">
+                    <div className="mt-4 text-sm font-medium text-gray-100">
                       View case study →
                     </div>
                   </div>
@@ -75,7 +75,7 @@ export default function WorkPage() {
           </Reveal>
           <div className="mx-auto mt-16 max-w-3xl">
             <Reveal>
-              <h2 className="font-serif text-4xl text-white md:text-5xl">
+              <h2 className="font-serif text-4xl text-gray-100 md:text-5xl">
                 Harbor
               </h2>
             </Reveal>
@@ -118,7 +118,7 @@ export default function WorkPage() {
                         key={outcome.label}
                         className="rounded-sm border border-gray-800 bg-gray-900 p-6"
                       >
-                        <div className="font-serif text-3xl text-white">
+                        <div className="font-serif text-3xl text-gray-100">
                           {outcome.value}
                         </div>
                         <div className="mt-2 text-sm text-gray-300">
@@ -134,7 +134,7 @@ export default function WorkPage() {
         </div>
       </section>
 
-      <section className="bg-black py-24 text-white">
+      <section className="bg-white py-24 text-gray-100">
         <div className="mx-auto max-w-6xl px-6 text-center lg:px-12">
           <Reveal>
             <h2 className="font-serif text-4xl md:text-5xl">
@@ -149,7 +149,7 @@ export default function WorkPage() {
           <Reveal delay={0.2}>
             <div className="mt-8">
               <a
-                className="btn-border-animate inline-flex h-12 items-center justify-center rounded-sm bg-white px-8 text-sm font-medium text-black transition duration-300 hover:bg-gray-100"
+                className="btn-border-animate inline-flex h-12 items-center justify-center rounded-sm bg-gray-100 px-8 text-sm font-medium text-black transition duration-300 hover:bg-gray-100"
                 href="/contact"
               >
                 Get in touch →

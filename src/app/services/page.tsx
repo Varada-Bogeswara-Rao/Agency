@@ -48,7 +48,7 @@ const stack = [
 
 export default function ServicesPage() {
   return (
-    <main className="bg-gray-950 text-gray-100">
+    <main className="bg-white text-gray-100">
       <section className="flex min-h-[70svh] items-center py-24">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <Reveal>
@@ -57,7 +57,7 @@ export default function ServicesPage() {
             </p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h1 className="mt-4 font-serif text-5xl font-semibold text-white md:text-[3.5rem]">
+            <h1 className="mt-4 font-serif text-5xl font-semibold text-gray-100 md:text-[3.5rem]">
               Build. Launch. Maintain.
             </h1>
           </Reveal>
@@ -81,14 +81,14 @@ export default function ServicesPage() {
             >
               <Reveal>
                 <div className={`${index % 2 === 1 ? "lg:col-start-2" : ""}`}>
-                  <h2 className="font-serif text-4xl text-white md:text-[2.5rem]">
+                  <h2 className="font-serif text-4xl text-gray-100 md:text-[2.5rem]">
                     {service.title}
                   </h2>
                   <p className="mt-6 text-lg text-gray-300">
                     {service.description}
                   </p>
                   <div className="mt-6">
-                    <div className="text-sm font-medium text-white">
+                    <div className="text-sm font-medium text-gray-100">
                       What’s included
                     </div>
                     <ul className="mt-4 space-y-2 text-base text-gray-300">
@@ -116,10 +116,10 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-gray-950 py-24">
+      <section className="bg-white py-24">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <Reveal>
-            <h2 className="font-serif text-4xl text-white md:text-5xl">
+            <h2 className="font-serif text-4xl text-gray-100 md:text-5xl">
               Technology Stack
             </h2>
           </Reveal>
@@ -135,7 +135,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-black py-24 text-white">
+      <section className="bg-white py-24 text-gray-100">
         <div className="mx-auto max-w-6xl px-6 text-center lg:px-12">
           <Reveal>
             <h2 className="font-serif text-4xl md:text-5xl">
@@ -150,7 +150,7 @@ export default function ServicesPage() {
           <Reveal delay={0.2}>
             <div className="mt-8">
               <a
-                className="btn-border-animate inline-flex h-12 items-center justify-center rounded-sm bg-white px-8 text-sm font-medium text-black transition duration-300 hover:bg-gray-100"
+                className="btn-border-animate inline-flex h-12 items-center justify-center rounded-sm bg-gray-100 px-8 text-sm font-medium text-black transition duration-300 hover:bg-gray-100"
                 href="/contact"
               >
                 Get in touch →

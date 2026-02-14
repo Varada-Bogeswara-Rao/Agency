@@ -22,7 +22,7 @@ export function FAQ({ items }: FAQProps) {
         return (
           <div key={item.question} className="py-6">
             <button
-              className="flex w-full items-center justify-between text-left text-lg font-medium text-white"
+              className="flex w-full items-center justify-between text-left text-lg font-medium text-gray-100"
               onClick={() => setOpenIndex(isOpen ? null : index)}
               aria-expanded={isOpen}
             >

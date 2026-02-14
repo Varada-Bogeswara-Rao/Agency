@@ -37,13 +37,13 @@ export function TestimonialsOverlay({ testimonials }: TestimonialsOverlayProps) 
               {testimonials.map((testimonial) => (
                 <article
                   key={testimonial.author}
-                  className="flex h-full flex-col rounded-[24px] border border-gray-800 bg-gray-950 p-7 shadow-[0_14px_32px_rgba(0,0,0,0.6)]"
+                  className="flex h-full flex-col rounded-[24px] border border-gray-800 bg-white p-7 shadow-[0_14px_32px_rgba(0,0,0,0.6)]"
                 >
                   <p className="text-lg italic leading-relaxed text-gray-300">
                     {testimonial.quote}
                   </p>
                   <div className="mt-6">
-                    <div className="font-medium text-white">
+                    <div className="font-medium text-gray-100">
                       {testimonial.author}
                     </div>
                     <div className="text-sm text-gray-400">

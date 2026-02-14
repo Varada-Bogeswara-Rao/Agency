@@ -21,11 +21,11 @@ const faqs = [
 
 export default function ContactPage() {
   return (
-    <main className="bg-gray-950 text-gray-100">
+    <main className="bg-white text-gray-100">
       <section className="py-24">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <Reveal>
-            <h1 className="font-serif text-5xl font-semibold text-white md:text-[3.5rem]">
+            <h1 className="font-serif text-5xl font-semibold text-gray-100 md:text-[3.5rem]">
               Let’s Talk
             </h1>
           </Reveal>
@@ -53,7 +53,7 @@ export default function ContactPage() {
                   id="name"
                   name="name"
                   type="text"
-                  className="mt-2 w-full rounded-sm border border-gray-700 bg-gray-950 px-4 py-3 text-base text-gray-100 focus:border-gray-200 focus:outline-none"
+                  className="mt-2 w-full rounded-sm border border-gray-700 bg-gray-100 px-4 py-3 text-base text-gray-100 focus:border-gray-200 focus:outline-none"
                 />
               </div>
               <div>
@@ -67,7 +67,7 @@ export default function ContactPage() {
                   id="email"
                   name="email"
                   type="email"
-                  className="mt-2 w-full rounded-sm border border-gray-700 bg-gray-950 px-4 py-3 text-base text-gray-100 focus:border-gray-200 focus:outline-none"
+                  className="mt-2 w-full rounded-sm border border-gray-700 bg-gray-100 px-4 py-3 text-base text-gray-100 focus:border-gray-200 focus:outline-none"
                 />
               </div>
               <div>
@@ -81,7 +81,7 @@ export default function ContactPage() {
                   id="company"
                   name="company"
                   type="text"
-                  className="mt-2 w-full rounded-sm border border-gray-700 bg-gray-950 px-4 py-3 text-base text-gray-100 focus:border-gray-200 focus:outline-none"
+                  className="mt-2 w-full rounded-sm border border-gray-700 bg-gray-100 px-4 py-3 text-base text-gray-100 focus:border-gray-200 focus:outline-none"
                 />
               </div>
               <div>
@@ -94,7 +94,7 @@ export default function ContactPage() {
                 <select
                   id="project"
                   name="project"
-                  className="mt-2 w-full rounded-sm border border-gray-700 bg-gray-950 px-4 py-3 text-base text-gray-100 focus:border-gray-200 focus:outline-none"
+                  className="mt-2 w-full rounded-sm border border-gray-700 bg-gray-100 px-4 py-3 text-base text-gray-100 focus:border-gray-200 focus:outline-none"
                   defaultValue=""
                 >
                   <option value="" disabled>
@@ -116,7 +116,7 @@ export default function ContactPage() {
                 <select
                   id="budget"
                   name="budget"
-                  className="mt-2 w-full rounded-sm border border-gray-700 bg-gray-950 px-4 py-3 text-base text-gray-100 focus:border-gray-200 focus:outline-none"
+                  className="mt-2 w-full rounded-sm border border-gray-700 bg-gray-100 px-4 py-3 text-base text-gray-100 focus:border-gray-200 focus:outline-none"
                   defaultValue=""
                 >
                   <option value="" disabled>
@@ -139,10 +139,10 @@ export default function ContactPage() {
                   id="message"
                   name="message"
                   rows={5}
-                  className="mt-2 w-full rounded-sm border border-gray-700 bg-gray-950 px-4 py-3 text-base text-gray-100 focus:border-gray-200 focus:outline-none"
+                  className="mt-2 w-full rounded-sm border border-gray-700 bg-gray-100 px-4 py-3 text-base text-gray-100 focus:border-gray-200 focus:outline-none"
                 />
               </div>
-              <button className="btn-border-animate h-12 w-full rounded-sm bg-white text-sm font-medium text-black transition duration-300 hover:bg-gray-100">
+              <button className="btn-border-animate h-12 w-full rounded-sm bg-gray-100 text-sm font-medium text-black transition duration-300 hover:bg-gray-100">
                 Start Your Project →
               </button>
             </form>
@@ -151,7 +151,7 @@ export default function ContactPage() {
             <div className="space-y-6 rounded-sm border border-gray-800 bg-gray-900 p-10">
               <div>
                 <div className="text-sm font-medium text-gray-200">Email</div>
-                <div className="mt-2 text-base text-white">
+                <div className="mt-2 text-base text-gray-100">
                   hello@agency.com
                 </div>
               </div>
@@ -177,7 +177,7 @@ export default function ContactPage() {
       <section className="py-24">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <Reveal>
-            <h2 className="font-serif text-4xl text-white md:text-5xl">
+            <h2 className="font-serif text-4xl text-gray-100 md:text-5xl">
               FAQ
             </h2>
           </Reveal>

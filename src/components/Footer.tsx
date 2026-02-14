@@ -1,9 +1,9 @@
 export function Footer() {
   return (
-    <footer className="border-t border-gray-800 bg-gray-950">
+    <footer className="border-t border-gray-800 bg-white">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 pb-20 pt-40 text-sm text-gray-300 md:grid-cols-4 lg:px-12">
         <div>
-          <div className="font-serif text-xl text-white">Agency</div>
+          <div className="font-serif text-xl text-gray-100">Agency</div>
           <p className="mt-4 text-sm text-gray-400">
             Clean MVPs for modern startups.
           </p>
@@ -13,16 +13,16 @@ export function Footer() {
             Quick Links
           </div>
           <div className="mt-4 space-y-2">
-            <a className="block hover:text-white" href="/services">
+            <a className="block hover:text-gray-100" href="/services">
               Services
             </a>
-            <a className="block hover:text-white" href="/work">
+            <a className="block hover:text-gray-100" href="/work">
               Work
             </a>
-            <a className="block hover:text-white" href="/about">
+            <a className="block hover:text-gray-100" href="/about">
               About
             </a>
-            <a className="block hover:text-white" href="/contact">
+            <a className="block hover:text-gray-100" href="/contact">
               Contact
             </a>
           </div>
@@ -32,16 +32,16 @@ export function Footer() {
             Services
           </div>
           <div className="mt-4 space-y-2">
-            <a className="block hover:text-white" href="/services">
+            <a className="block hover:text-gray-100" href="/services">
               MVP Development
             </a>
-            <a className="block hover:text-white" href="/services">
+            <a className="block hover:text-gray-100" href="/services">
               Web Development
             </a>
-            <a className="block hover:text-white" href="/services">
+            <a className="block hover:text-gray-100" href="/services">
               App Development
             </a>
-            <a className="block hover:text-white" href="/services">
+            <a className="block hover:text-gray-100" href="/services">
               Maintenance
             </a>
           </div>

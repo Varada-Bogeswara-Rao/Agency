@@ -1,4 +1,4 @@
-﻿import { TestimonialsOverlay } from "@/components/TestimonialsOverlay";
+import { TestimonialsOverlay } from "@/components/TestimonialsOverlay";
 
 const services = [
   {
@@ -82,7 +82,7 @@ const testimonials = [
 
 export default function Home() {
   return (
-    <main className="bg-gray-950 text-gray-100">
+    <main className="bg-white text-gray-100">
       <section className="min-h-[85svh] pb-16 pt-16">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <h1 className="max-w-3xl font-serif text-5xl font-semibold leading-tight md:text-[4rem]">
@@ -113,10 +113,10 @@ export default function Home() {
           <div className="mt-12 grid gap-10 md:grid-cols-3">
             {services.map((service) => (
               <div key={service.title}>
-                <div className="font-serif text-4xl text-white">
+                <div className="font-serif text-4xl text-gray-100">
                   {service.number}
                 </div>
-                <h3 className="mt-6 font-sans text-xl font-semibold text-white">
+                <h3 className="mt-6 font-sans text-xl font-semibold text-gray-100">
                   {service.title}
                 </h3>
                 <p className="mt-4 text-base text-gray-300">
@@ -142,7 +142,7 @@ export default function Home() {
                 <div className="font-serif text-6xl text-gray-700">
                   {step.number}
                 </div>
-                <h3 className="mt-4 font-sans text-xl font-semibold text-white">
+                <h3 className="mt-4 font-sans text-xl font-semibold text-gray-100">
                   {step.title}
                 </h3>
                 <p className="mt-4 text-base text-gray-300">
@@ -178,7 +178,7 @@ export default function Home() {
                   <p className="text-xs font-medium uppercase tracking-[0.05em] text-gray-400">
                     {study.label}
                   </p>
-                  <h3 className="mt-4 font-sans text-2xl font-semibold text-white md:text-[2.5rem]">
+                  <h3 className="mt-4 font-sans text-2xl font-semibold text-gray-100 md:text-[2.5rem]">
                     {study.title}
                   </h3>
                   <p className="mt-4 text-lg text-gray-300">
