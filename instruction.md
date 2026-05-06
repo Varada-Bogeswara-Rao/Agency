@@ -712,7 +712,7 @@ MVP, Web, App, Maintenance
 Email, Social (if applicable)
 
 [Bottom Bar]
-© 2024 Agency • Privacy • Terms
+© 2026 Agency • Privacy • Terms
 Styling:
 
 If dark bg: White/gray-400 text

@@ -5,16 +5,17 @@
   --primary-white: #f8f8f8;
   --off-white: #14161a;
 
-  --gray-900: #f3f4f6;
-  --gray-800: #e5e7eb;
-  --gray-700: #cbd5e1;
-  --gray-600: #9ca3af;
+  --gray-950: #030712;
+  --gray-900: #111827;
+  --gray-800: #1f2937;
+  --gray-700: #374151;
+  --gray-600: #4b5563;
   --gray-500: #6b7280;
-  --gray-400: #4b5563;
-  --gray-300: #374151;
-  --gray-200: #1f2937;
-  --gray-100: #111827;
-  --gray-50: #0b0f17;
+  --gray-400: #9ca3af;
+  --gray-300: #d1d5db;
+  --gray-200: #e5e7eb;
+  --gray-100: #f3f4f6;
+  --gray-50: #f9fafb;
 
   --accent-dark: #f8f8f8;
   --accent-light: #14161a;
@@ -40,60 +41,69 @@
   --font-serif: var(--font-instrument-serif);
 }
 
-body {
-  background: var(--primary-white);
-  color: var(--gray-100);
-  font-family: var(--font-poppins), sans-serif;
-  line-height: 1.6;
-}
+@layer base {
+  body {
+    background: var(--primary-white);
+    color: var(--gray-900);
+    font-family: var(--font-poppins), sans-serif;
+    line-height: 1.6;
+  }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 
-button {
-  font-family: inherit;
-}
+  button {
+    font-family: inherit;
+  }
 
-*:focus-visible {
-  outline: 2px solid var(--gray-700);
-  outline-offset: 2px;
+  *:focus-visible {
+    outline: 2px solid var(--gray-700);
+    outline-offset: 2px;
+  }
 }
 
 .btn-border-animate {
   position: relative;
+  transition: all 0.3s ease;
 }
 
 .btn-border-animate::before {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: -1px;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    currentColor 50%,
-    transparent 100%
-  );
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      transparent 100%);
   background-size: 200% 100%;
-  background-position: 100% 0;
-  -webkit-mask: linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   opacity: 0;
   pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.btn-border-animate:hover {
+  background-color: var(--gray-800);
+  border-color: var(--gray-700);
 }
 
 .btn-border-animate:hover::before {
   opacity: 1;
-  animation: border-sweep 0.9s linear infinite;
+  animation: border-sweep 2s linear infinite;
 }
 
 @keyframes border-sweep {
-  to {
-    background-position: -100% 0;
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
   }
 }

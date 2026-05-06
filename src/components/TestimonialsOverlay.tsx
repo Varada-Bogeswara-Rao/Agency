@@ -17,63 +17,64 @@ export function TestimonialsOverlay({ testimonials }: TestimonialsOverlayProps) 
   const ref = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "end end"],
+    offset: ["start start", "end start"],
   });
-  const shrink = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.98, 0.94]);
-  const slideDown = useTransform(scrollYProgress, [0, 0.35, 1], [0, 40, 160]);
+
+  const opacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.4], [1, 0.95]);
 
   return (
-    <div ref={ref} className="relative h-[170svh]">
-      <section id="testimonials" className="sticky top-0 z-10">
-        <div className="mx-auto flex min-h-[100svh] max-w-6xl items-center px-6 py-16 lg:px-12">
-          <motion.div
-            style={{ scale: shrink, y: slideDown }}
-            className="w-full origin-top rounded-[36px] border border-gray-800 bg-gray-900 p-10 shadow-[0_24px_60px_rgba(0,0,0,0.55)] md:p-14"
-          >
-            <h2 className="font-serif text-4xl font-medium md:text-5xl">
-              What Our Clients Say
-            </h2>
-            <div className="grid gap-10 md:grid-cols-3">
-              {testimonials.map((testimonial) => (
-                <article
-                  key={testimonial.author}
-                  className="flex h-full flex-col rounded-[24px] border border-gray-800 bg-white p-7 shadow-[0_14px_32px_rgba(0,0,0,0.6)]"
-                >
-                  <p className="text-lg italic leading-relaxed text-gray-300">
+    <div ref={ref} className="relative z-0 bg-gray-50">
+      <section id="testimonials" className="sticky top-0 -z-10 flex min-h-[100svh] items-center justify-center overflow-hidden py-24">
+        <motion.div style={{ opacity, scale }} className="mx-auto w-full max-w-6xl px-6 lg:px-12">
+          <h2 className="font-serif text-4xl font-medium text-gray-900 md:text-5xl text-center">
+            What Our Clients Say
+          </h2>
+          <div className="mt-16 grid gap-8 md:grid-cols-3">
+            {testimonials.map((testimonial) => (
+              <article
+                key={testimonial.author}
+                className="flex h-full flex-col justify-between rounded-sm border border-gray-200 bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
+              >
+                <div>
+                  <div className="mb-6 flex content-start text-gray-300">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" />
+                    </svg>
+                  </div>
+                  <p className="text-base leading-relaxed text-gray-700 md:text-lg">
                     {testimonial.quote}
                   </p>
-                  <div className="mt-6">
-                    <div className="font-medium text-gray-100">
-                      {testimonial.author}
-                    </div>
-                    <div className="text-sm text-gray-400">
-                      {testimonial.role}
-                    </div>
+                </div>
+                <div className="mt-8 pt-6 border-t border-gray-100">
+                  <div className="font-semibold text-gray-900">
+                    {testimonial.author}
                   </div>
-                </article>
-              ))}
-            </div>
-          </motion.div>
-        </div>
+                  <div className="mt-1 text-sm font-medium text-gray-500">
+                    {testimonial.role}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </motion.div>
       </section>
 
-      <section id="contact" className="relative z-20 mt-[10svh]">
-        <div className="mx-auto flex min-h-[100svh] w-full max-w-6xl items-center px-6 py-16 lg:px-12">
-          <div className="flex min-h-[70svh] w-full flex-col justify-center rounded-[36px] border border-gray-800 bg-gray-900 p-10 text-center shadow-[0_24px_60px_rgba(0,0,0,0.6)] md:min-h-[75svh] md:p-14">
-            <h2 className="font-serif text-4xl font-medium md:text-5xl">
-              Ready to Build Your MVP?
-            </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-400">
-              Let&apos;s turn your idea into a launched product.
-            </p>
-            <div className="mt-8">
-              <a
-                className="btn-border-animate inline-flex h-12 items-center justify-center rounded-sm border border-gray-200 bg-gray-100 px-8 text-sm font-medium text-black"
-                href="/contact"
-              >
-                Get in touch
-              </a>
-            </div>
+      <section id="contact" className="relative z-20 w-full bg-white py-32 shadow-[0_-20px_40px_rgba(0,0,0,0.03)] border-t border-gray-200">
+        <div className="mx-auto flex w-full max-w-6xl flex-col items-center px-6 text-center lg:px-12">
+          <h2 className="font-serif text-4xl font-medium text-gray-900 md:text-5xl">
+            Ready to Build Your MVP?
+          </h2>
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600">
+            Let&apos;s turn your idea into a launched product.
+          </p>
+          <div className="mt-10">
+            <a
+              className="btn-border-animate inline-flex h-12 items-center justify-center rounded-sm bg-gray-900 px-8 text-sm font-medium text-white transition duration-300"
+              href="/contact"
+            >
+              Get in touch →
+            </a>
           </div>
         </div>
       </section>

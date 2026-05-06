@@ -48,21 +48,21 @@ const stack = [
 
 export default function ServicesPage() {
   return (
-    <main className="bg-white text-gray-100">
-      <section className="flex min-h-[70svh] items-center py-24">
+    <main className="bg-white text-gray-900">
+      <section className="flex min-h-[70svh] items-center pt-32 pb-24">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <Reveal>
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-gray-400">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-gray-600">
               What We Do
             </p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h1 className="mt-4 font-serif text-5xl font-semibold text-gray-100 md:text-[3.5rem]">
+            <h1 className="mt-4 font-serif text-5xl font-semibold text-gray-900 md:text-[3.5rem]">
               Build. Launch. Maintain.
             </h1>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mt-6 max-w-2xl text-lg text-gray-300 md:text-xl">
+            <p className="mt-6 max-w-2xl text-lg text-gray-700 md:text-xl">
               End-to-end development services for tech startups who need to move
               fast without compromising quality.
             </p>
@@ -75,40 +75,38 @@ export default function ServicesPage() {
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`grid items-center gap-12 lg:grid-cols-2 ${
-                index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
-              }`}
+              className={`grid items-center gap-12 lg:grid-cols-2 ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
+                }`}
             >
               <Reveal>
                 <div className={`${index % 2 === 1 ? "lg:col-start-2" : ""}`}>
-                  <h2 className="font-serif text-4xl text-gray-100 md:text-[2.5rem]">
+                  <h2 className="font-serif text-4xl text-gray-900 md:text-[2.5rem]">
                     {service.title}
                   </h2>
-                  <p className="mt-6 text-lg text-gray-300">
+                  <p className="mt-6 text-lg text-gray-700">
                     {service.description}
                   </p>
                   <div className="mt-6">
-                    <div className="text-sm font-medium text-gray-100">
+                    <div className="text-xs uppercase tracking-widest text-gray-500 font-semibold">
                       What’s included
                     </div>
-                    <ul className="mt-4 space-y-2 text-base text-gray-300">
+                    <ul className="mt-4 space-y-2 text-base text-gray-700">
                       {service.includes.map((item) => (
                         <li key={item}>{item}</li>
                       ))}
                     </ul>
                   </div>
-                  <p className="mt-6 text-base text-gray-300">
+                  <p className="mt-6 text-base text-gray-700">
                     {service.timeline}
                   </p>
                 </div>
               </Reveal>
               <Reveal>
                 <div
-                  className={`${
-                    index % 2 === 1 ? "lg:col-start-1" : ""
-                  }`}
+                  className={`${index % 2 === 1 ? "lg:col-start-1" : ""
+                    }`}
                 >
-                  <div className="aspect-[4/3] w-full rounded-sm border border-gray-800 bg-gray-900" />
+                  <div className="aspect-[4/3] w-full rounded-sm border border-gray-200 bg-gray-100" />
                 </div>
               </Reveal>
             </div>
@@ -119,14 +117,14 @@ export default function ServicesPage() {
       <section className="bg-white py-24">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <Reveal>
-            <h2 className="font-serif text-4xl text-gray-100 md:text-5xl">
+            <h2 className="font-serif text-4xl text-gray-900 md:text-5xl">
               Technology Stack
             </h2>
           </Reveal>
           <div className="mt-14 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
             {stack.map((item) => (
               <Reveal key={item}>
-                <div className="flex h-20 items-center justify-center rounded-sm border border-gray-800 bg-gray-900 text-sm font-medium text-gray-300 transition duration-300 hover:scale-[1.02] hover:opacity-80">
+                <div className="flex h-20 items-center justify-center rounded-sm border border-gray-200 bg-gray-100 text-sm font-medium text-gray-700 transition duration-300 hover:scale-[1.02] hover:opacity-80">
                   {item}
                 </div>
               </Reveal>
@@ -135,7 +133,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-white py-24 text-gray-100">
+      <section className="bg-white py-24 text-gray-900">
         <div className="mx-auto max-w-6xl px-6 text-center lg:px-12">
           <Reveal>
             <h2 className="font-serif text-4xl md:text-5xl">
@@ -143,14 +141,14 @@ export default function ServicesPage() {
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-400">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600">
               Let’s turn your idea into a launched product.
             </p>
           </Reveal>
           <Reveal delay={0.2}>
             <div className="mt-8">
               <a
-                className="btn-border-animate inline-flex h-12 items-center justify-center rounded-sm bg-gray-100 px-8 text-sm font-medium text-black transition duration-300 hover:bg-gray-100"
+                className="btn-border-animate inline-flex h-12 items-center justify-center rounded-sm bg-gray-900 px-8 text-sm font-medium text-white transition duration-300"
                 href="/contact"
               >
                 Get in touch →

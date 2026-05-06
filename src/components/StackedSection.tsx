@@ -57,7 +57,7 @@ export function StackedSection({
         rounded
           ? "rounded-t-[56px] shadow-[0_-18px_45px_rgba(0,0,0,0.6)]"
           : "",
-        "border border-gray-800",
+        "border border-gray-200",
         className ?? "",
       ].join(" ")}
     >

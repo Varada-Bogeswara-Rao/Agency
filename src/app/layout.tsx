@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Instrument_Serif, Poppins } from "next/font/google";
 import { Footer } from "@/components/Footer";
+import { FloatingBookCall } from "@/components/FloatingBookCall";
 import { Navigation } from "@/components/Navigation";
 import "./globals.css";
 
@@ -19,7 +20,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Agency — Clean MVPs for Tech Startups",
+  title: "Merkel Studios — Clean MVPs for Tech Startups",
   description:
     "We build clean, launch-ready MVPs, websites, and apps for tech startups with ongoing maintenance.",
 };
@@ -32,11 +33,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${instrumentSerif.variable} ${poppins.variable} antialiased`}
+        className={`${instrumentSerif.variable} ${poppins.variable} antialiased overflow-x-hidden flex flex-col min-h-screen`}
       >
         <Navigation />
         {children}
         <Footer />
+        <FloatingBookCall />
       </body>
     </html>
   );
